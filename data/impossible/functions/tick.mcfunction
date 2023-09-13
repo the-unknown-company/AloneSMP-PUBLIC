@@ -1,4 +1,5 @@
 scoreboard players add @a time 1
+
 #thor hammer
 execute as @a[scores={carrot=1..,mana=60..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{thor:1}}}] at @s anchored eyes run summon minecraft:lightning_bolt ^ ^-1 ^7
 #mana thor hammer
@@ -190,7 +191,7 @@ execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft
 
 #for Michael
 
-
+execute as @a at @a if predicate impossible:Chance1-50 run function impossible:squacc_possession
 
 # to reset the interaction entity
 execute as @a[scores={RightClick=1..}] at @s unless entity @e[tag=int,distance=..1] run summon minecraft:interaction ~ ~5 ~ {Tags: ["int"],height:2,width:2}
