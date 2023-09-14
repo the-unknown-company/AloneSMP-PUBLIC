@@ -178,6 +178,7 @@ function impossible:scrolls/interaction/interaction
 execute as @a if predicate impossible:is_holding_flystick run effect give @s levitation 1 6 true
 execute as @a if predicate impossible:is_holding_hoverstick run effect give @s levitation 1 255 true
 # resistance and other passive abilites
+
 #for tnt cannon
 execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft:blaze_rod"}}] at @s[scores={RightClick=1..},nbt={SelectedItem:{id:"minecraft:blaze_rod",tag:{int:1b,tnt_launch:1b}}}] run function impossible:throw
 execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft:blaze_rod"}}] at @s[scores={RightClick=1..},nbt={SelectedItem:{id:"minecraft:blaze_rod",tag:{int:1b,tnt_launch:1b}}}] run scoreboard players remove @s mana 50
