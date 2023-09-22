@@ -1,5 +1,5 @@
 scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick 
-scorebpard objectives add tick_timer dummy
+scoreboard objectives add tick_timer dummy
 scoreboard objectives add seconds_timer dummy
 
 scoreboard objectives add death minecraft.custom:minecraft.deaths "deaths"
