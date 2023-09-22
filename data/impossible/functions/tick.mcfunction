@@ -1,12 +1,12 @@
 scoreboard players add @a tick_timer 1
-execute as @a at @a if score tick_timer matches 20.. run scoreboard players add @a second_timer 1
+execute as @a at @a if score @s tick_timer matches 20.. run scoreboard players add @a seconds_timer 1
 
 #The line of code below sets EssenceLunatic's score to 1000 if it is more than 1000
 
-execute as EssenceLunatic at EssenceLunatic if score second_timer matches 1000.. run scoreboard players set EssenceLunatic 1000
+execute as EssenceLunatic at EssenceLunatic if score @s seconds_timer matches 1000.. run scoreboard players set @s seconds_timer 1000
 
 #This caps everyone else's charges to 100
-execute as @a[name!=EssenceLunatic] at @a if score second_timer matches 100.. run scoreboard players set @a[name!=EssenceLunatic] 100
+execute as @a[name=!"EssenceLunatic"] if score @s[name=!"EssenceLunatic"] seconds_timer matches 100.. run scoreboard players set @s seconds_timer 100
 
 scoreboard players add @a time 1
 
@@ -143,7 +143,7 @@ execute as @e[tag=follower,limit=1] if score @p ability matches 700 at @e[tag=fo
 
 execute if score @p ability matches 1060.. run scoreboard players reset @a ability
 
-execute as @e[tag=follower,limit=1] if score @p ability matches 1020..1060 at @e[tag=follower,limit=1] anchored eyes run impossible:follow_boss
+execute as @e[tag=follower,limit=1] if score @p ability matches 1020..1060 at @e[tag=follower,limit=1] anchored eyes run function impossible:follow_boss
 
 #bomb-bow
 execute as @a[nbt={SelectedItem:{id:"minecraft:bow",tag:{Enchantments:[{}]}}}] at @e[type=arrow,nbt={inGround:true}] run tag @e[type=arrow,nbt={inGround:false,HasBeenShot:true,},distance=..40] add bomb
@@ -197,7 +197,7 @@ execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft
 
 #for Hudaifa
 
-execute as @a at @a if predicate impossible:Chance1-50 run function impossible:squacc_possession
+execute as @a at @a if predicate impossible:chance1-50 run function impossible:squacc_possession
 
 #for jan
 
