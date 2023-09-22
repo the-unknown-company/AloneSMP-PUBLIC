@@ -1,4 +1,15 @@
+scoreboard players add @a tick_timer 1
+execute as @a at @a if score tick_timer matches 20.. run scoreboard players add @a second_timer 1
+
+#The line of code below sets EssenceLunatic's score to 1000 if it is more than 1000
+
+execute as EssenceLunatic at EssenceLunatic if score second_timer matches 1000.. run scoreboard players set EssenceLunatic 1000
+
+#This caps everyone else's charges to 100
+execute as @a[name!=EssenceLunatic] at @a if score second_timer matches 100.. run scoreboard players set @a[name!=EssenceLunatic] 100
+
 scoreboard players add @a time 1
+
 #thor hammer
 execute as @a[scores={carrot=1..,mana=60..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{thor:1}}}] at @s anchored eyes run summon minecraft:lightning_bolt ^ ^-1 ^7
 #mana thor hammer
@@ -186,11 +197,11 @@ execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft
 
 #for Hudaifa
 
+execute as @a at @a if predicate impossible:Chance1-50 run function impossible:squacc_possession
+
 #for jan
 
 #for Michael
-
-
 
 # to reset the interaction entity
 execute as @a[scores={RightClick=1..}] at @s unless entity @e[tag=int,distance=..1] run summon minecraft:interaction ~ ~5 ~ {Tags: ["int"],height:2,width:2}

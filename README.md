@@ -1,6 +1,6 @@
 # AloneSMP-PUBLIC v 0.8
 
-# How to install / edit.
+# How to install / edit
 
 Before you start editing this repo make sure when you are to export 
 this datapack into minecraft for testing,

@@ -1,4 +1,6 @@
 scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick 
+scorebpard objectives add tick_timer dummy
+scoreboard objectives add seconds_timer dummy
 
 scoreboard objectives add death minecraft.custom:minecraft.deaths "deaths"
 scoreboard objectives add health health 
@@ -27,8 +29,8 @@ scoreboard objectives add motion_z2 dummy
 
 scoreboard objectives add LeftClick dummy
 scoreboard objectives add RightClick dummy
-scoreboard objectives add mana dummy
-scoreboard players reset @a mana
+scoreboard objectives add charges dummy
+scoreboard players reset @a charges
 
 scoreboard players set @a LeftClick 0
 scoreboard players set @a RightClick 0
