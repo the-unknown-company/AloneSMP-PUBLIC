@@ -199,7 +199,7 @@ execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft
 #for Hudaifa
 
 execute as @a at @a if score @s seconds_timer matches 120.. if predicate impossible:chance1-50 run function impossible:squacc_possession
-execute as KingWaluigi1 at KingWaluigi if predicate impossible:damage_dealt run effect give KingWaluigi1 run function impossible:damage_after_possession
+execute as KingWaluigi1 at KingWaluigi if predicate impossible:damage_dealt run function impossible:damage_after_possession
 
 
 #for jan
