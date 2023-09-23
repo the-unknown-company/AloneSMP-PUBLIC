@@ -1,6 +1,9 @@
 scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick 
 scoreboard objectives add tick_timer dummy
 scoreboard objectives add seconds_timer dummy
+scoreboard objectives add charges dummy
+scoreboard objectives add possesed dummy
+
 
 scoreboard objectives add death minecraft.custom:minecraft.deaths "deaths"
 scoreboard objectives add health health 

@@ -1,12 +1,13 @@
 scoreboard players add @a tick_timer 1
-execute as @a at @a if score @s tick_timer matches 20.. run scoreboard players add @a seconds_timer 1
+execute as @a at @a if score @s tick_timer matches 20.. run function impossible:second_increase_timer
+
 
 #The line of code below sets EssenceLunatic's score to 1000 if it is more than 1000
 
-execute as EssenceLunatic at EssenceLunatic if score @s seconds_timer matches 1000.. run scoreboard players set @s seconds_timer 1000
+execute as EssenceLunatic at EssenceLunatic if score @s charges matches 1000.. run scoreboard players set @s charges 1000
 
 #This caps everyone else's charges to 100
-execute as @a[name=!"EssenceLunatic"] if score @s[name=!"EssenceLunatic"] seconds_timer matches 100.. run scoreboard players set @s seconds_timer 100
+execute as @a[name=!"EssenceLunatic"] if score @s[name=!"EssenceLunatic"] charges matches 100.. run scoreboard players set @s charges 100
 
 scoreboard players add @a time 1
 
@@ -197,7 +198,9 @@ execute as @a[scores={RightClick=1..,mana=50..},nbt={SelectedItem:{id:"minecraft
 
 #for Hudaifa
 
-execute as @a at @a if predicate impossible:chance1-50 run function impossible:squacc_possession
+execute as @a at @a if score @s seconds_timer matches 120.. if predicate impossible:chance1-50 run function impossible:squacc_possession
+execute as KingWaluigi1 at KingWaluigi if predicate impossible:damage_dealt run function impossible:damage_after_possession
+
 
 #for jan
 
